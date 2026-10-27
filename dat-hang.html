@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạp Hóa Công Nghệ | Đặt hàng mẫu</title>
+</head>
+<body bgcolor="#F4F6F9">
+
+    <!-- Header -->
+    <table bgcolor="#1E2A38" border="0" cellpadding="15" cellspacing="0" width="100%">
+        <tr>
+            <td align="center">
+                <font color="#FFFFFF" size="7"><b>TẠP HÓA CÔNG NGHỆ</b></font><br/>
+                <font color="#5DADE2" size="4">TIỆN ÍCH SỐ - GIẢI PHÁP GÓC LÀM VIỆC HIỆN ĐẠI</font><br/>
+                <font color="#BDC3C7" size="2">Cửa hàng phụ kiện & thiết bị công nghệ mẫu</font>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Menu điều hướng -->
+    <table bgcolor="#D5DBDB" border="0" cellpadding="12" cellspacing="0" width="100%">
+        <tr>
+            <td align="center">
+                <nav aria-label="Điều hướng chính">
+                    <a href="index.html">Trang chủ</a> | 
+                    <a href="index.html#san-pham">Sản phẩm</a> | 
+                    <a href="chi-tiet.html">Chi tiết</a> | 
+                    <a href="bang-gia.html">Bảng tổng hợp</a> | 
+                    <a href="dat-hang.html">Đặt hàng mẫu</a>
+                </nav>
+            </td>
+        </tr>
+    </table>
+
+    <h1 align="center">PHIẾU ĐẶT HÀNG TRỰC TUYẾN</h1>
+    <table align="center" border="0" cellpadding="0" cellspacing="0" width="55%">
+        <tr>
+            <td>
+                <form action="xac-nhan.html" method="get">
+                    <!-- Thông tin người nhận -->
+                    <fieldset>
+                        <legend><b>Thông tin khách hàng</b></legend>
+                        <p>
+                            <label for="ten">Họ và tên *</label><br/>
+                            <input autocomplete="name" id="ten" maxlength="60" minlength="2" name="hoTen" placeholder="Ví dụ: Trần Văn An" required="" size="40" type="text"/>
+                        </p>
+                        <p>
+                            <label for="email">Địa chỉ Email *</label><br/>
+                            <input autocomplete="email" id="email" name="email" placeholder="email@domain.com" required="" size="40" type="email"/>
+                        </p>
+                        <p>
+                            <label for="phone">Số điện thoại liên hệ</label><br/>
+                            <input id="phone" name="phone" placeholder="0901234567" size="40" type="tel"/>
+                        </p>
+                    </fieldset>
+                    <br/>
+
+                    <!-- Lựa chọn mặt hàng -->
+                    <fieldset>
+                        <legend><b>Chi tiết sản phẩm đặt mua</b></legend>
+                        <p>
+                            <label for="product">Mặt hàng công nghệ *</label><br/>
+                            <select id="product" name="maSanPham" required="">
+                                <option value="">-- Chọn sản phẩm --</option>
+                                <option value="CN01">CN01 - Chuột Silent Không Dây (190.000 ₫)</option>
+                                <option value="CN02">CN02 - Bàn Phím Văn Phòng Slim (280.000 ₫)</option>
+                                <option value="CN03">CN03 - Lót Chuột Cỡ Lớn Deskpad (90.000 ₫)</option>
+                                <option value="CN04">CN04 - Củ Sạc Nhanh GaN 30W (250.000 ₫)</option>
+                                <option value="CN05">CN05 - Cáp Type-C Bọc Dù 100W (110.000 ₫)</option>
+                                <option value="CN06">CN06 - Hub Chuyển Đổi Type-C 5in1 (380.000 ₫)</option>
+                                <option value="CN07">CN07 - Pin Dự Phòng 10000mAh (310.000 ₫)</option>
+                                <option value="CN08">CN08 - Tai Nghe Chụp Tai Wireless (490.000 ₫)</option>
+                                <option value="CN09">CN09 - Loa Bluetooth Mini Bass (320.000 ₫)</option>
+                                <option value="CN10">CN10 - Giá Đỡ Kim Loại Để Bàn (140.000 ₫)</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="color">Tùy chọn màu sắc *</label><br/>
+                            <select id="color" name="mauSac" required="">
+                                <option value="">-- Chọn màu sắc --</option>
+                                <option value="den">Đen nhám / Đen tuyền</option>
+                                <option value="trang">Trắng ngọc / Trắng sứ</option>
+                                <option value="xam">Xám titan / Bạc kim loại</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="quantity">Số lượng đặt (từ 1 đến 5 chiếc)</label><br/>
+                            <input id="quantity" max="5" min="1" name="soLuong" required="" step="1" type="number" value="1"/>
+                        </p>
+                        <fieldset>
+                            <legend>Phương thức nhận hàng *</legend>
+                            <label><input checked="" name="giaoHang" required="" type="radio" value="tai-cua-hang"/> Nhận trực tiếp tại cửa hàng</label><br/>
+                            <label><input name="giaoHang" type="radio" value="giao-tan-noi"/> Giao hàng chuyển phát tận nơi</label>
+                        </fieldset>
+                        <p>
+                            <label for="note">Ghi chú giao hàng</label><br/>
+                            <textarea cols="40" id="note" maxlength="300" name="ghiChu" placeholder="Ghi chú thời gian giao hoặc dặn dò đóng gói" rows="3"></textarea>
+                        </p>
+                    </fieldset>
+                    <br/>
+
+                    <!-- Điều khoản & Submit -->
+                    <p>
+                        <label>
+                            <input name="dongy" required="" type="checkbox" value="yes"/> 
+                            Đơn hàng phục vụ bài lab không phải đặt hàng thực tế! *
+                        </label>
+                    </p>
+                    <p>
+                        <button type="submit">Gửi yêu cầu đặt hàng</button>
+                        <button type="reset">Nhập lại từ đầu</button>
+                    </p>
+                </form>
+            </td>
+        </tr>
+    </table>
+    <br/>
+
+    <!-- Footer -->
+    <table bgcolor="#1E2A38" border="0" cellpadding="16" cellspacing="0" width="100%">
+        <tr>
+            <td align="center">
+                <font color="#FFFFFF"><b>TẠP HÓA CÔNG NGHỆ</b> - 10 sản phẩm công nghệ demo © 2026</font><br/>
+                <font color="#FAD7A0">Mọi thông tin giá cả, sản phẩm và giao dịch chỉ phục vụ mục đích học tập.</font><br/>
+                <a href="index.html"><font color="#FFFFFF">Quay lại trang chủ</font></a>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
